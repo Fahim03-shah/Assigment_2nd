@@ -42,15 +42,14 @@ nav .menu a:hover {
 
 nav .cart-icon {
     font-size: 20px;
+    padding: 10px;
+    
+    font-weight: lighter;
 }
 
-nav .mobile-menu-toggle {
-    display: none;
-}
 
-nav .mobile-menu-toggle:checked + .mobile-menu-icon + .menu {
-    display: block;
-}
+
+
 
 nav .menu {
     display: flex;
@@ -58,11 +57,7 @@ nav .menu {
     margin-left: 400px;
 }
 
-nav .mobile-menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
+
 
 /* Banner Section */
 .banner {
@@ -120,10 +115,23 @@ nav .mobile-menu-icon {
         margin-top: 20px;
     }
 
-    .menu a {
-        padding: 10px;
-        width: 100%;
-        text-align: left;
+    .menu a{
+        display: none;
+    }
+    nav .logo img{
+        margin-top: 50px;
+    }
+    nav .cart-icon{
+
+        display: block;
+        margin-left: auto;
+        margin-bottom: 30px;
+        
+        
+        z-index: 10;
+        
+        
+        
     }
 
     .banner {
@@ -460,7 +468,34 @@ nav .mobile-menu-icon {
     bottom: 20px;
     font-size: 1rem;
   }
+  .left-deals .bloom,
+.left-deals .ana {
+  height: 184px;
+  width: 361px; 
+  
 }
+.deal.zabo img{
+    height: 184px;
+  width: 361px;
+  margin-left: 50px; 
+  
+}
+.deal-info{
+     position: absolute;
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Adjust the positioning to truly center it */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center; 
+
+}
+
+}
+  
+
 
 @media (max-width: 480px) {
   .latest-deals h2 {
@@ -612,4 +647,37 @@ nav .mobile-menu-icon {
 
 .social-icon:hover img {
   opacity: 0.8;
+}
+@media (max-width:768px) {
+    .footer{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .footer-left{
+        margin-bottom: 20px;
+    }
+        .footer-right{ 
+    width: 100%;
+        }
+        .footer-links{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+        }
+        .footer-links li{
+            margin-bottom: 8px;
+        }
+        .social-icons{
+            margin-top: 20px;
+            justify-content: center;
+            
+        
+        }
+        .social-icons .social-icon{
+            margin-bottom: 10px;
+        }
+        
+    
 }
