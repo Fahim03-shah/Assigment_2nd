@@ -1,0 +1,615 @@
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-banner {
+    background-color: #fff;
+}
+
+/* Navbar Section */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo img {
+    height: 50px;
+    width: auto;
+    margin-left: 40px;
+}
+
+nav .menu a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: #333;
+    
+    font-weight: 46px;
+}
+
+nav .menu a:hover {
+    color: #ff6f00;
+}
+
+nav .cart-icon {
+    font-size: 20px;
+}
+
+nav .mobile-menu-toggle {
+    display: none;
+}
+
+nav .mobile-menu-toggle:checked + .mobile-menu-icon + .menu {
+    display: block;
+}
+
+nav .menu {
+    display: flex;
+    gap: 20px;
+    margin-left: 400px;
+}
+
+nav .mobile-menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    background-color:  #fff;
+}
+
+.banner-text {
+    max-width: 60%;
+}
+ .black-text {
+    color: black;
+}
+
+.orange-text {
+    color: #ff6f00;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+    
+
+.banner-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.banner-image img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .menu a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+
+    .banner-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+   
+
+    .banner-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav .mobile-menu-icon {
+        display: block;
+    }
+}
+
+/* Plants Section */
+
+       
+    .plants {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.plants h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plants p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.plant-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.plant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.plant-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.plant-card p {
+    font-size: 18px;
+    color: #ff6f00;
+    margin-bottom: 20px;
+}
+
+.plant-card button {
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.plant-card button:hover {
+    background-color: #e65c00;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .plants-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plants h2 {
+        font-size: 28px;
+    }
+
+}
+
+/* Plants LOVER Section */
+
+    .flower-plant-lover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 50%; /* Adjust as needed */
+}
+
+.image-container img {
+  width: 540px;
+  height: 597px;
+  display: block;
+}
+
+.trusted-badge {
+  position: absolute;
+   /* Adjust the distance from the top */
+  right: -75px; /* Adjust the distance from the right */
+  z-index: 10; 
+  top:-90px;/* Make sure it's above the image */
+}
+
+.trusted-badge img {
+  width: 286px; /* Adjust size of the badge */
+  height: 286px;
+}
+
+.text-content {
+  width: 50%; /* Adjust as needed */
+  padding: 20px;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Hide the trusted badge on small screens */
+@media (max-width: 768px) {
+  .trusted-badge {
+    display: none; /* Hide the trusted badge */
+  }
+
+  .flower-plant-lover {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container, .text-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .text-content h2 {
+    font-size: 50px;
+  }
+
+  .text-content p {
+    font-size: 22px;
+    
+  }
+}
+
+
+
+
+
+/* Latest Deals Section */
+
+/* Latest Deals Section */
+
+.latest-deals {
+  text-align: center;
+  padding: 20px;
+  gap: 28px;
+}
+
+.latest-deals h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.latest-deals p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.deals-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* Left Column (Bloom + Ana) */
+.left-deals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+}
+
+.deal {
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.deal img {
+  
+  display: block;
+}
+
+.deal-info {
+  position: absolute;
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Adjust the positioning to truly center it */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center; /* Ensure the text is centered inside the box */
+}
+
+.deal-info p {
+  margin: 0;
+  color:#FFFFFF;
+}
+
+.shop-now {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 15px;
+  
+  color:#FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shop-now:hover {
+  background-color: #ff4500;
+}
+
+/* Ensure the combined height of Bloom and Ana equals Zabo */
+.deals-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+/*.left-deals{
+  padding-right: 300px;
+}*/
+
+.left-deals .deal {
+  flex: 1;
+}
+
+.left-deals .bloom,
+.left-deals .ana {
+  height: 400px;
+  width: 367px; /* Ensure both Bloom and Ana images have equal height */
+  
+}
+
+.deal.zabo {
+  flex: 1;
+  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  justify-content: center; /* Zabo plant will take the full height */
+  padding-right: 500px;
+}
+.left-deals ,
+.deal.zabo {
+    gap: 28PX;
+    justify-content: space-between;
+    padding: auto;
+
+}
+.deal.zabo img{
+    width: 900px ;
+    height:423px ;
+    
+
+}
+
+/* Responsive Layout for Smaller Devices */
+@media (max-width: 768px) {
+  .deals-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-deals {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .deal {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .deal-info {
+    left: 20px;
+    bottom: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-deals h2 {
+    font-size: 1.5rem;
+  }
+
+  .latest-deals p {
+    font-size: 1rem;
+  }
+}
+
+
+
+    
+
+
+
+
+
+/* Join Section */
+
+    .subscription-section {
+  background-image:url('assets/news-letter-bg.png') ; /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.subscription-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px; /* Adjust width as needed */
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-btn:hover {
+  background-color: #ff4500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subscription-content h2 {
+    font-size: 2rem;
+  }
+
+  .subscription-form {
+    flex-direction: column;
+  }
+
+  .email-input {
+    width: 250px;
+  }
+}
+
+    
+    
+
+
+
+/* Footer Section */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-logo {
+  width: 100px; /* Adjust logo size */
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+  width: 50%;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #ff6347;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.social-icon img {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+}
+
+.social-icon:hover img {
+  opacity: 0.8;
+}
